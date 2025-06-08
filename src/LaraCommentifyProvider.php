@@ -22,7 +22,7 @@ class LaraCommentifyProvider extends ServiceProvider
     public function boot(): void
     {
       
-        // parent::registerPolicies();
+        parent::registerPolicies();
       
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'laracommentify');
 

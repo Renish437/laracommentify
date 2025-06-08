@@ -5,7 +5,8 @@ A reusable comment system for Laravel 12 and Livewire 3, built for rapid develop
 
 Install the package via Composer:
 
-    composer require codewithren/laracommentify:dev-main
+    composer require codewithren/laracommentify:dev-main --with-all-dependencies
+
 
 If you encounter a stability error, update your composer.json:
 
