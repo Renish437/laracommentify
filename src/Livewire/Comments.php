@@ -2,7 +2,7 @@
 
 namespace CodeWithRen\LaraCommentify\Livewire;
 
-use App\Livewire\Forms\CommentForm;
+use CodeWithRen\LaraCommentify\Livewire\Forms\CommentForm;
 use CodeWithRen\LaraCommentify\Models\Comment;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;

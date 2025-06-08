@@ -2,8 +2,8 @@
 
 namespace CodeWithRen\LaraCommentify\Livewire;
 
-use App\Livewire\Forms\ReplyForm;
-use App\Livewire\Forms\UpdateCommentForm;
+use CodeWithRen\LaraCommentify\Livewire\Forms\ReplyForm;
+use CodeWithRen\LaraCommentify\Livewire\Forms\UpdateCommentForm;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Log;
 use Livewire\Component;
@@ -39,7 +39,9 @@ class SingleComment extends Component
         $this->comment = $comment;
 
         $this->updateBody = $this->comment->body;
-        $this->updateForm->body = $this->comment->body;
+            $this->updateForm->fill([
+        'body' => $this->comment->body,
+    ]);
     }
 
     public function addReply()
