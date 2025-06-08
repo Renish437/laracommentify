@@ -1,0 +1,43 @@
+{
+    "name": "codewithren/laracommentify",
+    "description": "This is reusable commenting system developed in laravel livewire for enhanching developing process",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codewithren\\Laracommentify\\": "src/"
+        }
+    },
+    "extra":{
+        "laravel": {
+            "providers": [
+                "CodeWithRen\\LaraCommentify\\LaraCommentifyProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Renish Siwakoti"
+        }
+    ],
+    "keywords": [
+        "renishsiwakoti",
+        "laravel-livewire",
+        "livewire",
+        "comments",
+        "lara-commentify",
+        "laracommentify",
+        "commentify",
+        "livewire-comments-system"
+    ],
+    "minimum-stability": "dev",
+    "require": {
+       "php": "^8.3",
+        "illuminate/database": "^12.0",
+        "illuminate/support": "^12.0",
+        "livewire/livewire": "^3.6",
+         "laravel/framework": "^12.0"
+      
+    }
+    
+}
