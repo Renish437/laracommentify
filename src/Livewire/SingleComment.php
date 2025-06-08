@@ -7,6 +7,7 @@ use App\Livewire\Forms\UpdateCommentForm;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Log;
 use Livewire\Component;
+use Livewire\WithFormObjects;
 use CodeWithRen\LaraCommentify\Models\Comment;
 
 class SingleComment extends Component
@@ -15,7 +16,7 @@ class SingleComment extends Component
 
     protected $listeners = ['deleteComment' => '$refresh'];
 
-    public $comment; // removed strict typing
+    public $comment;
 
     public $isReplying = false;
     public $isEditing = false;
@@ -24,6 +25,14 @@ class SingleComment extends Component
     public UpdateCommentForm $updateForm;
 
     public $updateBody = '';
+
+    public function formObjects()
+    {
+        return [
+            'form' => ReplyForm::class,
+            'updateForm' => UpdateCommentForm::class,
+        ];
+    }
 
     public function mount($comment)
     {

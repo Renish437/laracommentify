@@ -22,7 +22,14 @@ class Comments extends Component
 
     public function mount($model){
         $this->model = $model;
+         
         
+    }
+     public function formObjects()
+    {
+        return [
+            'form' => CommentForm::class,
+        ];
     }
     public function render()
     {
