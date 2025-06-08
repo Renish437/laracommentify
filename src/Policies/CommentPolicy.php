@@ -3,7 +3,7 @@
 namespace CodeWithRen\LaraCommentify\Policies;
 
 use CodeWithRen\LaraCommentify\Models\Comment;
-use CodeWithRen\LaraCommentify\Models\User;
+use App\Models\User;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
