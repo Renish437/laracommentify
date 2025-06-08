@@ -1,59 +1,49 @@
-# LaraCommentify
+LaraCommentify
 
-A reusable comment system for Laravel 12 and Livewire 3. Built for rapid development and clean architecture.
+A reusable comment system for Laravel 12 and Livewire 3, built for rapid development and clean architecture.
+📦 Installation
 
-## 📦 Installation
+Install the package via Composer:
 
+composer require codewithren/laracommentify:dev-main
 
-    composer require codewithren/laracommentify:dev-main
+Or add this to your composer.json if you encounter stability issues:
 
-Or, in your composer.json:
-
-    "minimum-stability": "dev",
-    "prefer-stable": true
+"minimum-stability": "dev",
+"prefer-stable": true
 
 ⚙️ Setup
 
-Publish views (optional):
+1. Publish Views (Optional):
 
-    php artisan vendor:publish --tag=views     --provider="CodeWithRen\LaraCommentify\LaraCommentifyProvider"
+php artisan vendor:publish --tag=views --provider="CodeWithRen\LaraCommentify\LaraCommentifyProvider"
 
-Run migrations (if any):
+2. Run Migrations:
 
-    php artisan migrate
+php artisan migrate
 
 🧩 Usage
 
-In your Blade view:
+In your Blade view, include the comment component and pass in any model that should be commentable (e.g., Post, Article, etc.):
 
-    <livewire:comments :model="$post" />
+<livewire:comments :model="$post" />
 
-Make sure your model uses the HasComments trait (if defined).
+Make sure your model uses the HasComments trait (if applicable).
 🛠 Components
+Component	Description
+<livewire:comments />	Displays comments for a model
+<livewire:single-comment />	Renders a single comment with replies
+<livewire:like-comment />	Like/unlike a comment
+✅ Requirements
 
-    <livewire:comments /> — Displays comments
+    PHP 8.3+
 
-    <livewire:single-comment /> — Renders one comment with replies
+    Laravel 12+
 
-    <livewire:like-comment /> — Like/unlike a comment
+    Livewire 3+
 
-🧪 Test
+🧑‍💻 Author
 
-To check the package, visit:
+Developed by Renish Siwakoti
 
-http://localhost:8000/commentify/test
-
-📁 Directory Structure
-
-packages/
-└── CodeWithRen/
-    └── LaraCommentify/
-        ├── src/
-        ├── routes/
-        │   └── web.php
-        ├── resources/
-        │   └── views/
-        │       ├── livewire/
-        │       │   ├── comments.blade.php
-        │       │   ├── like-comment.blade.php
-        │       │   └── single-comment.blade.php
+GitHub: github.com/Renish437/laracommentify

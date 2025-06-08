@@ -92,10 +92,13 @@
 
                 </div>
                 <div>
-                    @if (!$comment->parent_id && $comment->replies->count() > 0)
-                        <button type="button" class="text-gray-500 hover:underline"
-                            @click="openReplies = !openReplies">View all replies</button>
-                    @endif
+                   @if (!$comment->parent_id && $comment->replies->count() > 0)
+    <button type="button" class="text-gray-500 hover:underline"
+        @click="openReplies = !openReplies">
+        <span x-text="openReplies ? 'Hide replies' : 'View all replies'"></span>
+    </button>
+@endif
+
                 </div>
             </div>
 
